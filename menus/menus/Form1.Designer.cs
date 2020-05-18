@@ -35,11 +35,16 @@
             this.mArchivoSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mProductos = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mClientesclientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.mClientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.mClientesClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.mClientesAlbaranes = new System.Windows.Forms.ToolStripMenuItem();
             this.mArchivosIVA = new System.Windows.Forms.ToolStripMenuItem();
             this.mArchivoProvincias = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsMenuPrincipalSalir = new System.Windows.Forms.ToolStrip();
+            this.tsMenuProductos = new System.Windows.Forms.ToolStrip();
+            this.tsMenuClientes = new System.Windows.Forms.ToolStrip();
             this.mMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +53,7 @@
             this.mMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.productosToolStripMenuItem,
-            this.clientesToolStripMenuItem});
+            this.mClientes});
             this.mMenu.Location = new System.Drawing.Point(0, 0);
             this.mMenu.Name = "mMenu";
             this.mMenu.Size = new System.Drawing.Size(521, 24);
@@ -59,6 +64,7 @@
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mConfiguración,
+            this.toolStripSeparator2,
             this.mArchivoImprimir,
             this.mArchivoSalir});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
@@ -104,20 +110,21 @@
             this.mProductos.Size = new System.Drawing.Size(180, 22);
             this.mProductos.Text = "Productos";
             // 
-            // clientesToolStripMenuItem
+            // mClientes
             // 
-            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mClientesclientes,
+            this.mClientes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mClientesClientes,
+            this.toolStripSeparator1,
             this.mClientesAlbaranes});
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.mClientes.Name = "mClientes";
+            this.mClientes.Size = new System.Drawing.Size(61, 20);
+            this.mClientes.Text = "Clientes";
             // 
-            // mClientesclientes
+            // mClientesClientes
             // 
-            this.mClientesclientes.Name = "mClientesclientes";
-            this.mClientesclientes.Size = new System.Drawing.Size(180, 22);
-            this.mClientesclientes.Text = "clientes";
+            this.mClientesClientes.Name = "mClientesClientes";
+            this.mClientesClientes.Size = new System.Drawing.Size(180, 22);
+            this.mClientesClientes.Text = "Clientes";
             // 
             // mClientesAlbaranes
             // 
@@ -137,11 +144,48 @@
             this.mArchivoProvincias.Size = new System.Drawing.Size(180, 22);
             this.mArchivoProvincias.Text = "Provincias";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // tsMenuPrincipalSalir
+            // 
+            this.tsMenuPrincipalSalir.Location = new System.Drawing.Point(0, 24);
+            this.tsMenuPrincipalSalir.Name = "tsMenuPrincipalSalir";
+            this.tsMenuPrincipalSalir.Size = new System.Drawing.Size(521, 25);
+            this.tsMenuPrincipalSalir.TabIndex = 1;
+            this.tsMenuPrincipalSalir.Text = "salir";
+            // 
+            // tsMenuProductos
+            // 
+            this.tsMenuProductos.Location = new System.Drawing.Point(0, 49);
+            this.tsMenuProductos.Name = "tsMenuProductos";
+            this.tsMenuProductos.Size = new System.Drawing.Size(521, 25);
+            this.tsMenuProductos.TabIndex = 2;
+            this.tsMenuProductos.Text = "toolStrip1";
+            // 
+            // tsMenuClientes
+            // 
+            this.tsMenuClientes.Location = new System.Drawing.Point(0, 74);
+            this.tsMenuClientes.Name = "tsMenuClientes";
+            this.tsMenuClientes.Size = new System.Drawing.Size(521, 25);
+            this.tsMenuClientes.TabIndex = 3;
+            this.tsMenuClientes.Text = "toolStrip1";
+            // 
             // mMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 261);
+            this.Controls.Add(this.tsMenuClientes);
+            this.Controls.Add(this.tsMenuProductos);
+            this.Controls.Add(this.tsMenuPrincipalSalir);
             this.Controls.Add(this.mMenu);
             this.MainMenuStrip = this.mMenu;
             this.Name = "mMenuPrincipal";
@@ -164,9 +208,14 @@
         private System.Windows.Forms.ToolStripMenuItem mArchivoSalir;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mProductos;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mClientesclientes;
+        private System.Windows.Forms.ToolStripMenuItem mClientes;
+        private System.Windows.Forms.ToolStripMenuItem mClientesClientes;
         private System.Windows.Forms.ToolStripMenuItem mClientesAlbaranes;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStrip tsMenuPrincipalSalir;
+        private System.Windows.Forms.ToolStrip tsMenuProductos;
+        private System.Windows.Forms.ToolStrip tsMenuClientes;
     }
 }
 
